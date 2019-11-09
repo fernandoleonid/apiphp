@@ -7,9 +7,7 @@
         $results = read($resource, $id);
         $msgErro = $id ? "id não encontrado" : "Recurso não encontrado";
         if ( $results ) {
-            // foreach ( $result  as $campo => $aluno ){
-            //     $alunos[] = $aluno;
-            // }
+
             echo json_encode(array("status"=>"success","data"=>$results));
         } else{
             echo json_encode(array("status"=>"error","data"=>$msgErro));
