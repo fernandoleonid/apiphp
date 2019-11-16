@@ -22,7 +22,7 @@
         // }
 
         if (in_array($method,['POST','PUT','DELETE','GET'])){
-            if (in_array ( $resource, ['alunos','professores'])){
+            if (in_array ( $resource, ['alunos','cursos'])){
                 call_user_func_array("m" . $method, array($resource, $id));
             }else
                 header('HTTP/1.1 404 Not Found');
