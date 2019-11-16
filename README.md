@@ -10,7 +10,10 @@ Projeto criado com fins didáticos.
 
     
 **Título**          | **Criar registro no recurso**
---------------------|--------------
+--------------------|-
 URL                 | /nomeRecurso
 Método              | POST
-Resposta de sucesso | Código: 200
+Resposta de sucesso | Código: 201  {"status":"success","data":"Cadastro realizado"}
+Resposta de erro de insert  | Código: 400  {"status":"error","data":"Falta dados para cadastrar"}
+Resposta de erro de recurso | Código: 404
+Resposta de erro de metodo não permitido    | Código: 405
