@@ -13,7 +13,7 @@ Projeto criado com fins didáticos.
 --------------------|-
 URL                 | /nomeRecurso
 Método              | POST
-Resposta de sucesso | Código: 201  {"status":"success","data":"Cadastro realizado"}
-Resposta de erro de insert  | Código: 400  {"status":"error","data":"Falta dados para cadastrar"}
-Resposta de erro de recurso | Código: 404
-Resposta de erro de metodo não permitido    | Código: 405
+Resposta de sucesso | Código: 201 { "status":"success", "data":"Cadastro realizado" }
+Resposta de erro    | Código: 400 { "status":"error", "data":"Falta dados para cadastrar" }
+Resposta de erro    | Código: 404 { "status": "error", "data": "Recurso não encontrado", "recursos disponiveis": "alunos,cursos" }
+Resposta de erro    | Código: 405 { "status":"error", "data": "Metodo não permitido", "Metodos permitidos":"POST, PUT, DELETE, GET" }
