@@ -9,9 +9,9 @@ Projeto criado com fins didáticos.
 ## Funcionamento
 No arquivo **/model/connnection.php** especificar informações sobre o seu banco de dados.
 
-NO arquivo **/controller/routes.php** espceificar os recuros (campos) disponiveis no banco de dados.
+NO arquivo **/controller/routes.php** espceificar os recursos (campos) disponiveis no banco de dados.
 
-## Exemplo
+## Exemplos
     
 **Título**          | **Criar registro no recurso**
 --------------------|-
