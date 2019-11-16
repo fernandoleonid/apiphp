@@ -21,13 +21,18 @@
         //     break;
         // }
 
-        if (in_array($method,['POST','PUT','DELETE','GET'])){
-            if (in_array ( $resource, ['alunos','cursos'])){
+        $AllowResouces = ['alunos','cursos'];
+        $AllowMethod = ['POST','PUT','DELETE','GET'];
+
+        if (in_array($method,$AllowMethod)){
+            if (in_array ( $resource, $AllowResouces)){
                 call_user_func_array("m" . $method, array($resource, $id));
             }else
+                echo json_encode(array("status"=>"error","data"=>"Recurso não encontrado","recursos disponiveis"=>implode(",",$AllowResouces)));
                 header('HTTP/1.1 404 Not Found');
-                header('Allow: POST, PUT, DELETE, GET');
+                header('Resouces: ' . implode(",",$AllowResouces));
         } else {
+            echo json_encode(array("status"=>"error","data"=>"Metodo não permitido","Metodos permitidos"=>"POST, PUT, DELETE, GET"));
             header('HTTP/1.1 405 Method Not Allowed');
             header('Allow: POST, PUT, DELETE, GET');
         }
