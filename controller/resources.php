@@ -7,12 +7,12 @@
         $results = read($resource, $id);
         $msgErro = $id ? "id não encontrado" : "Recurso não encontrado";
         if ( $results ) {
-
             echo json_encode(array("status"=>"success","data"=>$results));
         } else{
             echo json_encode(array("status"=>"error","data"=>$msgErro));
             header('HTTP/1.1 404 Not Found');
         }
+        exit;
     }
 
     function mPost( $resource ) {
@@ -25,6 +25,7 @@
             echo json_encode(array("status"=>"error","data"=>"Falta dados para cadastrar"));
             header('HTTP/1.1 400 Bad Request');
         }
+        exit;
     }
 
     function mPut ( $resource, $id ) {
@@ -38,6 +39,7 @@
             echo json_encode(array("status"=>"error","data"=>"Falta dados para atualizar"));
             header('HTTP/1.1 400 Bad Request');
         }
+        exit;
     }
 
     function mDelete ( $resource, $id ) {
@@ -51,4 +53,5 @@
             echo json_encode(array("status"=>"error","data"=>"ID não encontrado"));
             header('HTTP/1.1 400 Bad Request');
         }
+        exit;
     }
