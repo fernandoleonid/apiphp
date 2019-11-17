@@ -18,5 +18,5 @@ URL                 | /nomeRecurso
 Método              | POST
 Resposta de sucesso | Código: 201 { "status":"success", "data":"Cadastro realizado" }
 Resposta de erro    | Código: 400 { "status":"error", "data":"Falta dados para cadastrar" }
-Resposta de erro    | Código: 404 { "status": "error", "data": "Recurso não encontrado", "recursos disponiveis": "campo1, campo2" }
+Resposta de erro    | Código: 404 { "status": "error", "data": "Recurso não encontrado", "recursos disponiveis": "recurso1, recurso2" }
 Resposta de erro    | Código: 405 { "status":"error", "data": "Metodo não permitido", "Metodos permitidos":"POST, PUT, DELETE, GET" }
