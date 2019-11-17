@@ -5,10 +5,10 @@ API criada com fins didáticos para as aulas da disciplina de DS do curso Sistem
 Implementa os metodos POST, GET, PUT e DELETE, ou seja, todos os metodos para um CRUD.
 
 
-## Funcionamento
+## Configurações
 No arquivo **/model/connnection.php** especificar informações sobre o seu banco de dados.
 
-NO arquivo **/controller/routes.php** espceificar os recursos (campos) disponiveis no banco de dados.
+NO arquivo **/controller/routes.php** especificar os recursos (campos) disponiveis no banco de dados.
 
 ## Exemplos
     
