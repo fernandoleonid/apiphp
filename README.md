@@ -1,10 +1,9 @@
 # API REST Genérica
 
-API para as aulas da disciplina de DS do curso Sistemas para Internet da FATEC São Roque.
+API criada com fins didáticos para as aulas da disciplina de DS do curso Sistemas para Internet da FATEC São Roque.
 
 Implementa os metodos POST, GET, PUT e DELETE, ou seja, todos os metodos para um CRUD.
 
-Projeto criado com fins didáticos.
 
 ## Funcionamento
 No arquivo **/model/connnection.php** especificar informações sobre o seu banco de dados.
