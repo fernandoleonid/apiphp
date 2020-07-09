@@ -1,10 +1,11 @@
 <?php
     $servername = "localhost";
     $username = "root";
-    $password = "usbw";
+    $password = "";
+    $db = 'escola';
     
 
-    $conn = new mysqli($servername, $username, $password, "escola");
+    $conn = new mysqli($servername, $username, $password, $db);
     $conn->set_charset('utf8');
 
     if ($conn->connect_error) {
