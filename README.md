@@ -29,7 +29,7 @@ Resposta de erro    | Código: 405 { "status":"error", "data": "Metodo não perm
 const getAlunos = ( url ) => fetch ( url ).then ( res => res.json() );
 
 const  showAlunos = async () =>  {
-    const url = 'http://localhost/00-planejamento/apiphp/alunos/';
+    const url = 'http://seudominio/alunos/';
     const alunos = await getAlunos(url);
     console.log(alunos.data);
 };
@@ -38,7 +38,7 @@ showAlunos();
 #### POST
 ~~~
  function createAluno( aluno ) {
-    const url = 'http://localhost/00-planejamento/apiphp/alunos/';
+    const url = 'http://seudominio/alunos/';
     const options = {
       method: 'POST',
       body: JSON.stringify( aluno )
@@ -64,7 +64,7 @@ showAlunos();
 #### PUT
 ~~~
   function updateAluno( aluno ) {
-    const url = `http://localhost/00-planejamento/apiphp/alunos/${aluno.id}`;
+    const url = `http://seudominio/alunos/${aluno.id}`;
     const options = {
       method: 'PUT',
       body: JSON.stringify( aluno )
@@ -85,7 +85,7 @@ showAlunos();
 ~~~~
 
   function deleteAluno( alunoId ) {
-    const url = `http://localhost/00-planejamento/apiphp/alunos/${alunoId}`;
+    const url = `http://seudominio/alunos/${alunoId}`;
     const options = {
       method: 'DELETE'
     };
