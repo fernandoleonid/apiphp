@@ -23,24 +23,75 @@ Resposta de erro    | Código: 404 { "status": "error", "data": "Recurso não en
 Resposta de erro    | Código: 405 { "status":"error", "data": "Metodo não permitido", "Metodos permitidos":"POST, PUT, DELETE, GET" }
 
 ### javaScript
+
+#### GET
 ~~~
-function createAluno( aluno ) {
-  const url = 'http://localhost/alunos';
-  const options = {
-    method: 'post',
-    body: JSON.stringify( aluno )};
+const getAlunos = ( url ) => fetch ( url ).then ( res => res.json() );
 
-  fetch(url, options )
-    .then( response => response.json() )
-    .then( data => console.log (data));
-}
-
-const aluno = {
-    "nome": "Artur Pendragon",
-    "data": "1881-11-21 ",
-    "media": "40",
-    "id_curso": "3"
-}
-
-createAluno ( aluno );
+const  showAlunos = async () =>  {
+    const url = 'http://seudominio/alunos/';
+    const alunos = await getAlunos(url);
+    console.log(alunos.data);
+};
+showAlunos();
 ~~~
+#### POST
+~~~
+ function createAluno( aluno ) {
+    const url = 'http://seudominio/alunos/';
+    const options = {
+      method: 'POST',
+      body: JSON.stringify( aluno )
+    };
+  
+    fetch(url, options )
+  }
+  
+    const aluno = {
+      "id":"",
+      "nome": "Cleyde Gomes da Silva"
+      "email": "cleydegomes@gmail.com",
+      "celular": "1199988888",
+      "logradouro": "rua sem fim",
+      "bairro": "Sem nome",
+      "cidade": "Barueri",
+      "estado": "SP",
+      "cep": "18135300"
+  };
+  
+  createAluno(aluno);
+~~~
+#### PUT
+~~~
+  function updateAluno( aluno ) {
+    const url = `http://seudominio/alunos/${aluno.id}`;
+    const options = {
+      method: 'PUT',
+      body: JSON.stringify( aluno )
+    };
+  
+    fetch(url, options )
+  }
+  
+    const aluno = {
+      "id":"5",
+      "nome": "Cleyde Gomes da Silva"
+      "email": "cleydegomes@gmail.com",
+  };
+  
+  updateAluno(aluno);
+~~~
+#### DELETE
+~~~~
+
+  function deleteAluno( alunoId ) {
+    const url = `http://seudominio/alunos/${alunoId}`;
+    const options = {
+      method: 'DELETE'
+    };
+  
+    fetch(url, options )
+  }
+  
+deleteAluno( 5 );
+~~~~
