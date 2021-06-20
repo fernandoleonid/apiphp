@@ -7,8 +7,8 @@ Implementa os metodos POST, GET, PUT e DELETE, ou seja, todos os metodos para um
 
 ## Utilização
 Configurar os arquivos:
-- **/model/connnection.php** com informações sobre o seu banco de dados;
-- **/controller/routes.php** com infomações dos recursos (campos) disponiveis no banco de dados.
+- **connnection.php** com informações sobre o seu banco de dados;
+- **routes.php** com infomações dos recursos (campos) disponiveis no banco de dados.
 
 ## Exemplos de entrada da API
 Como base um banco de dados com 3 tabelas, alunos, professores e disciplinas, porém proibida a utilização do recurso disciplinas configurado no array $AllowResouces do arquivo routes.php. 

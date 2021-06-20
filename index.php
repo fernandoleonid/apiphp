@@ -1,6 +1,6 @@
 <?php
 
-    include_once ("./controller/routes.php");
+    include_once ("routes.php");
 
 
     header('Access-Control-Allow-Origin: *');

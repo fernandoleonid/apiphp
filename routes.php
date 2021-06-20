@@ -1,5 +1,5 @@
 <?php 
-    include_once ("./controller/resources.php");
+    include_once ("resources.php");
         
     function routes($method, $resource, $id) {
         // switch($method) {

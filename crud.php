@@ -1,7 +1,7 @@
 <?php
 
     function create ($resource, $data) {
-        $conn =  include_once("./model/connnection.php");
+        $conn =  include_once("connnection.php");
 
         $fields = implode (",", array_keys($data));
         $records = array_values($data);
@@ -19,7 +19,7 @@
     }
 
     function read ($resource, $id=null) {
-        $conn =  include_once("./model/connnection.php");
+        $conn =  include_once("connnection.php");
         $sql = "SELECT * FROM $resource WHERE ?='' or id=?";
         $cmd = $conn->prepare($sql);
         $cmd->bind_param('ss',$id,$id);
@@ -28,7 +28,7 @@
     }
     
     function update ($resource, $id, $data) {
-        $conn =  include_once("./model/connnection.php");
+        $conn =  include_once("connnection.php");
 
         $update = implode ("=?,", array_keys($data)) . "=?";
         $records = array_values($data);
@@ -44,7 +44,7 @@
     }
 
     function delete ( $resource, $id ) {
-        $conn = include_once ("./model/connnection.php");
+        $conn = include_once ("connnection.php");
         $sql = "DELETE FROM $resource WHERE id=?";
         
         $cmd = $conn->prepare($sql);

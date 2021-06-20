@@ -1,6 +1,6 @@
 <?php
 
-    include_once ("./model/crud.php");
+    include_once ("crud.php");
 
     function mGet ($resource, $id=null) {
         
