@@ -1,4 +1,4 @@
-# API REST Genérica
+# API REST Genérica - Leonid
 
 API criada com fins didáticos para as aulas da disciplina de DS do curso Sistemas para Internet da FATEC São Roque.
 

@@ -21,7 +21,7 @@
         //     break;
         // }
 
-        $AllowResouces = ['alunos'];
+        $AllowResouces = ['contatos'];
         $AllowMethod = ['POST','PUT','DELETE','GET'];
         
         if (in_array($method,$AllowMethod)){

@@ -1,8 +1,8 @@
 <?php
-    $servername = "localhost";
+    $servername = "localhost:3306";
     $username = "root";
     $password = "";
-    $db = 'escola';
+    $db = 'aulafront';
     
 
     $conn = new mysqli($servername, $username, $password, $db);
